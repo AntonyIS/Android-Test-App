@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn;
+    Button btnLogin,btnSignup;
     EditText edUsername,edEmail,edPassword;
 
     String username,email,password;
@@ -19,12 +19,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn = findViewById(R.id.btnLogin);
+        btnLogin = findViewById(R.id.btnLogin);
+        btnSignup = findViewById(R.id.btnsignup);
         edUsername = findViewById(R.id.username);
         edEmail = findViewById(R.id.email);
         edPassword = findViewById(R.id.password);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent go = new Intent(MainActivity.this, ProfileActivity.class);
@@ -34,13 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if (username.isEmpty()){
                     edUsername.setError("Enter Username");
-                }
-
-                if (email.isEmpty()){
+                }else if (email.isEmpty()){
                     edEmail.setError("Enter Email");
                 }
-
-                if (password.isEmpty()){
+                else if (password.isEmpty()){
                     edPassword.setError("Enter Password");
                 }
 

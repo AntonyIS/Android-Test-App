@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
-    android:background="@color/colorPrimaryLight">
+    android:background="@color/colorPrimaryLight"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:text="username"
                     android:textColor="@color/colorAccent"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:gravity="center"
                     />
                 <TextView
@@ -38,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:text="email"
                     android:textColor="@color/colorAccent"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:gravity="center"
                     />
 
@@ -48,13 +49,90 @@
                     android:layout_height="wrap_content"
                     android:text="password"
                     android:textColor="@color/colorAccent"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:gravity="center"
                     />
             </LinearLayout>
-
-
-
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+
+        <TextView
+            android:id="@+id/tvwelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill the blanks below" />
+
+        <EditText
+            android:id="@+id/edCountry"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:hint="Country"
+            android:background="@drawable/edit"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/edCounty"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_airport_shuttle_black_24dp"
+            android:hint="County"
+            android:background="@drawable/edit"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/edProf"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_location_city_black_24dp"
+            android:hint="Profession"
+            android:background="@drawable/edit"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"/>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center">
+           <Button
+               android:id="@+id/btnGoBack"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Back"
+               android:background="@drawable/button"
+               android:layout_gravity=""
+               android:layout_margin="3dp"/>
+
+           <Button
+               android:id="@+id/btnSave"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Save"
+               android:background="@drawable/button"
+               android:layout_gravity=""
+               android:layout_margin="3dp"/>
+
+       </LinearLayout>
+    </LinearLayout>
+
 
 </LinearLayout>
